@@ -2,7 +2,7 @@
 function factIterat(num) {
   let result = 1;
   if (num < 0) {
-    alert("формула принимает только неотрицательное целое число");
+    return "формула принимает только неотрицательное целое число";
   } else if (num === 0) {
     result = 1;
   } else {
@@ -15,7 +15,9 @@ function factIterat(num) {
 
 // Рекурсивный расчет факториала
 function factRec(num) {
-  if (num === 0 || num === 1) {
+  if (num < 0) {
+    return "формула принимает только неотрицательное целое число";
+  } else if (num === 0 || num === 1) {
     return 1;
   } else {
     return num * factRec(num - 1);
